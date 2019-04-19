@@ -1,0 +1,7 @@
+{
+  "/data/stops.json/": {
+    "target": "http://www.triply.at",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

@@ -1,0 +1,15 @@
+<h1>Your Information</h1>
+<agm-map [latitude]="lat" [longitude]="lng" (mapClick)="click($event)" click='markerClick($event)'>
+  <agm-marker [latitude] = "lat" [longitude]="lng" (mouseOver)="onMouseOver(infoWindow,gm)">
+    <agm-info-window [disableAutoPan]="false" #infoWindow>
+
+            <div>
+                {{region}}
+            </div>
+
+        </agm-info-window>
+  </agm-marker>
+     <div  *ngFor="let marker of markers | async;">
+          <agm-marker [latitude]="marker.lat" [longitude]="marker.lng"></agm-marker>
+    </div>
+</agm-map>
